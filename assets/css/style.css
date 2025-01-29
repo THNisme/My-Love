@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+
+}
+
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.cover {
+    position: relative;
+    background-color: var(--primaryBackgroundColor);
+    font-family: var(--primaryFont);
+    overflow: hidden;
+    height: 650px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover-bg-element {
+    position: absolute;
+    top: 0;
+}
+
+.element-01 {
+    width: 500px;
+    top: -50px;
+    right: -180px;
+}
+
+.element-02 {
+    width: 200px;
+    top: -30px;
+    right: 150px;
+}
+
+.cover-avatar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-entity {
+    position: absolute;
+}
+
+.entity-1 {
+    top: 0;
+    left: 0;
+    width: 250px;
+}
+
+.entity-2 {
+    top: 100px;
+    left: 0;
+    width: 150px;
+}
+
+.entity-3 {
+    top: 0;
+    right: 0;
+    width: 250px;
+}
+
+.entity-4 {
+    bottom: 0;
+    right: 50px;
+    width: 200px;
+}
+
+.entity-5 {
+    bottom: 0;
+    left: 0;
+    width: 300px;
+}
+
+.avatar {
+    width: 80%;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    border: 10px solid var(--darkRed);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.cover-text-wrapper {}
+
+.cover-text-01 {
+    color: var(--whiteColor);
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+.cover-text-02 {
+    color: var(--bigTextColor);
+    text-transform: uppercase;
+    line-height: 1.7;
+    font-size: 4em;
+}
+
+
+.cover-text-03 {
+    color: var(--whiteColor);
+    font-size: 1.4em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.content {
+    background-image: url(../img/Background02.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: var(--primaryFont);
+    overflow: hidden;
+    height: 650px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.content-bg-element {
+    position: absolute;
+}
+
+.content-bg-element.element-01 {
+    width: 200px;
+    top: 0;
+    left: 0;
+}
+
+.content-bg-element.element-02 {
+    width: 300px;
+    top: 200px;
+    right: 0;
+}
+
+.content-wrapper {
+    text-align: center;
+    margin-top: 190px;
+}
+
+.content-text {
+    font-size: 1.4em;
+    color: var(--whiteColor);
+    line-height: 1.7;
+}
+
+.content-text strong {
+    color: var(--bigTextColor);
+}
+
+.content-wrapper h2 {
+    text-transform: uppercase;
+    color: var(--bigTextColor);
+    letter-spacing: 1px;
+}
+
+.content-wrapper img {
+    width: 250px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 739px) {
+
+    .cover {
+        height: fit-content;
+    }
+
+    .cover-avatar {
+        margin-top: 100px;
+    }
+
+    .cover-text-02 {
+        font-size: 3em;
+    }
+
+    .cover-text-03 br {
+        display: none;
+    }
+
+    .element-01 {
+        width: 200px;
+        top: -20px;
+        right: -70px;
+    }
+
+    .element-02 {
+        width: 100px;
+        top: -15px;
+        right: 70px;
+    }
+
+    .entity-1 {
+        top: 0;
+        left: 0;
+        width: 150px;
+    }
+
+    .entity-5 {
+        bottom: 0;
+        left: 0;
+        width: 200px;
+    }
+
+    .entity-3 {
+        top: 0;
+        right: 0;
+        width: 150px;
+    }
+
+    .entity-4 {
+        bottom: 0;
+        right: 50px;
+        width: 100px;
+    }
+
+    .cover-text-01 {
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    .cover-text-wrapper {
+        text-align: center;
+    }
+
+    .content {
+        /* display: none; */
+        height: fit-content;
+    }
+
+    .content-bg-element.element-01 {
+        width: 100px;
+    }
+
+    .content-bg-element.element-02 {
+        width: 200px;
+        top: 100px;
+    }
+    
+    .content-text {
+        font-size: 1.2em;
+        color: var(--whiteColor);
+        line-height: 1.4;
+    }
+
+    .content-wrapper {
+        margin-top: 50px;
+    }
+
+    .content-wrapper h2 {
+        font-size: 1.2em;
+    }
+
+}
