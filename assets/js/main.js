@@ -6,7 +6,12 @@ const musicBox = $('.music-box');
 
 const app = {
 
+
     handleEvent: function() {
+
+        musicBox.autoplay = true;
+        musicBox.controls = true;
+
         musicBtn.onclick = function () {
             if (musicBox.classList.contains('inactive')) {
                 musicBox.classList.remove('inactive');
@@ -20,6 +25,7 @@ const app = {
        
 
     start: function() {
+        musicBox.play();
         this.handleEvent();
     }
 }
