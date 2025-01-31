@@ -7,16 +7,26 @@ const musicBox = $('.music-box');
 musicBox.controls = true;
 
 const preloader = document.getElementById("preloader");
+const loader = $('.loader');
 const playButton = document.getElementById("playButton");
+const loadingText = document.getElementById("loadingText");
 
 const app = {
 
     preLoader: function () {
         window.addEventListener("load", function () {
-            // Khi trang load xong, hiện nút Play
+
+            // Khi trang load xong, hiện nút Play và text
             setTimeout(() => {
+                loader.style.display = "none";
                 playButton.style.display = "block";
             }, 2000);
+            
+            setTimeout(() => {
+                loadingText.classList.remove('loadingText-inactive');
+                loadingText.classList.add('loadingText-active');
+            }, 2500);
+
 
             // Khi user bấm Play, ẩn preloader
             playButton.addEventListener("click", function () {
@@ -25,9 +35,10 @@ const app = {
                 setTimeout(() => {
                     preloader.style.display = "none";
                     document.body.style.overflow = "auto"; // Cho phép cuộn lại
-                }, 300); // Hiệu ứng ẩn dần
+                }, 500);
             });
         });
+
 
 
     },
